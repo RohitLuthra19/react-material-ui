@@ -39,8 +39,8 @@ class App extends React.Component {
           <AppBar title="Quark XPress Server" onLeftIconButtonTouchTap={this.handleToggle} />
 
             <Drawer containerStyle={{height: 'calc(100% - 64px)', top: 64}} docked={true} width={200} open={this.state.open} zDepth={2}>
-              <MenuItem><Link to="/dashboard">Dashboard</Link></MenuItem>
-              <MenuItem><Link to="/information">Information</Link></MenuItem>
+              <Link to="/dashboard" style={{ textDecoration: 'none' }}><MenuItem>Dashboard</MenuItem></Link>
+              <Link to="/information" style={{ textDecoration: 'none' }}><MenuItem>Information</MenuItem></Link>
             </Drawer>
 
             <Route exact path='/dashboard' component={Dashboard} />
